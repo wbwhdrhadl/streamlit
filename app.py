@@ -12,10 +12,13 @@ your_option = st.sidebar.selectbox('좋아하는 작품은?', selectbox_options,
 st.sidebar.write('**당신의 선택** :', your_option)
 folder = './data/'
 image_files = [
-    'Vermeer.png', 'Gogh.png', 'Munch.png', 'ShinYoonbok.png'
+    'https://github.com/wbwhdrhadl/streamlit/blob/main/data/Vermeer.png?raw=true', 
+    'https://github.com/wbwhdrhadl/streamlit/blob/main/data/Gogh.png?raw=true',
+    'https://github.com/wbwhdrhadl/streamlit/blob/main/data/Munch.png?raw=true', 
+    'https://github.com/wbwhdrhadl/streamlit/blob/main/data/ShinYoonbok.png?raw=true'
     ]
 
 selectbox_options_index = selectbox_options.index(your_option)
 image_file = image_files[selectbox_options_index]
 image_local = Image.open(folder + image_file)
-st.image(image_local, caption=your_option)
+st.image(image_file, caption=your_option)
